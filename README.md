@@ -2,7 +2,7 @@ Seo4Olap
 ==================
 
 This application creates SEO-landingpages for every possible view of a datacube 
-modeled in the RDF Data Cube Vocabulary [7]. 
+modeled in the [RDF Data Cube Vocabulary][7]. 
 
 The source code was developed for a master thesis called "Search engine optimized
 presentation of statistical linked data" by Daniel Breucker at the Karlsruhe Institute
@@ -20,6 +20,7 @@ APIs, such as the Datastore and the Queuing Service.
 ## APIs
 - [Google Cloud Endpoints][3]
 - [Google App Engine Maven plugin][4]
+- [Olap4Ld][8]
 
 ## Setup Instructions
 
@@ -47,3 +48,4 @@ APIs, such as the Datastore and the Queuing Service.
 [5]: https://localhost:8080/_ah/api/explorer
 [6]: https://console.developers.google.com/
 [7]: https://www.w3.org/TR/vocab-data-cube/
+[8]: https://github.com/bkaempgen/olap4ld
