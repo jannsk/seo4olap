@@ -1,0 +1,32 @@
+PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX skos:    <http://www.w3.org/2004/02/skos/core#> 
+PREFIX qb:      <http://purl.org/linked-data/cube#> 
+PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#> 
+PREFIX owl:     <http://www.w3.org/2002/07/owl#>
+
+INSERT { 
+    ?DIMENSION_UNIQUE_NAME rdfs:range skos:Concept.
+    ?DIMENSION_UNIQUE_NAME qb:codeList ?newCodeList.
+    ?newCodeList skos:hasTopConcept ?MEMBER_UNIQUE_NAME.
+    
+    ?obs ?DIMENSION_UNIQUE_NAME ?MEMBER_UNIQUE_NAME. 
+    ?MEMBER_UNIQUE_NAME a skos:Concept;
+        skos:inScheme ?newCodeList;
+        rdfs:label ?MEMBER_LABEL.
+} 
+
+WHERE { 
+    ?CUBE_NAME qb:structure ?dsd. 
+    ?dsd qb:component ?compSpec. 
+    ?compSpec qb:dimension ?DIMENSION_UNIQUE_NAME. 
+    ?DIMENSION_UNIQUE_NAME rdfs:range ?range FILTER (?range != skos:Concept). 
+    ?obs qb:dataSet ?CUBE_NAME. 
+    ?obs ?DIMENSION_UNIQUE_NAME ?MEMBER_LABEL FILTER (ISLITERAL(?MEMBER_LABEL)). 
+    
+    BIND(URI(CONCAT(STR(?DIMENSION_UNIQUE_NAME), CONCAT("XXX", STR(?MEMBER_LABEL)))) as ?MEMBER_UNIQUE_NAME). 
+    BIND(URI(CONCAT(STR(?range), "XXXNewCodelist" )) as ?newCodeList). 
+
+}
+
+

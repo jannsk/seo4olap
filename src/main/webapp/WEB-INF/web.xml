@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>Rdf</servlet-name>
+		<servlet-class>com.breucker.seo4olap.server.RdfServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Sparql</servlet-name>
+		<servlet-class>com.breucker.seo4olap.server.SparqlServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Metadata</servlet-name>
+		<servlet-class>com.breucker.seo4olap.server.MetadataServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>StartSite</servlet-name>
+		<servlet-class>com.breucker.seo4olap.server.StartSiteServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>RobotsTxt</servlet-name>
+		<servlet-class>com.breucker.seo4olap.server.RobotsServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Result</servlet-name>
+		<servlet-class>com.breucker.seo4olap.server.ResultServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Dataset</servlet-name>
+		<servlet-class>com.breucker.seo4olap.server.DatasetServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Setup</servlet-name>
+		<servlet-class>com.breucker.seo4olap.server.SetupServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Sitemap</servlet-name>
+		<servlet-class>com.breucker.seo4olap.server.SitemapServlet</servlet-class>
+	</servlet>
+	<servlet>
+	  <servlet-name>Init</servlet-name>
+	  <servlet-class>com.breucker.seo4olap.server.InitServlet</servlet-class>
+	  <load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>Init</servlet-name>
+		<url-pattern>/admin/init</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>StartSite</servlet-name>
+		<url-pattern>/index</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RobotsTxt</servlet-name>
+		<url-pattern>/robots.txt</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Result</servlet-name>
+		<url-pattern>/result</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Dataset</servlet-name>
+		<url-pattern>/dataset</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Setup</servlet-name>
+		<url-pattern>/admin/setup</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Rdf</servlet-name>
+		<url-pattern>/admin/rdf</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Sparql</servlet-name>
+		<url-pattern>/admin/sparql</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Sitemap</servlet-name>
+		<url-pattern>/sitemapep</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Metadata</servlet-name>
+		<url-pattern>/admin/metadata</url-pattern>
+	</servlet-mapping>
+	<filter>
+        <filter-name>UrlRewriteFilter</filter-name>
+        <filter-class>org.tuckey.web.filters.urlrewrite.UrlRewriteFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>UrlRewriteFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+    </filter-mapping>
+	<welcome-file-list>
+		<welcome-file>index</welcome-file>
+	</welcome-file-list>
+	
+	<security-constraint>
+        <web-resource-collection>
+            <web-resource-name>admin</web-resource-name>
+            <url-pattern>/admin/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>admin</role-name>
+        </auth-constraint>
+        <user-data-constraint>
+            <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+        </user-data-constraint>
+    </security-constraint>
+	
+	<error-page>
+	    <!-- File not found -->
+	    <error-code>404</error-code>
+	    <location>/errors/404.html</location>
+	</error-page>
+	<error-page>
+	    <!-- Uncaught exception -->
+	    <error-code>500</error-code>
+	    <location>/errors/default-error.html</location>
+	</error-page>
+	<error-page>
+	    <!-- Unsupported servlet method -->
+	    <error-code>503</error-code>
+	    <location>/errors/default-error.html</location>
+	</error-page>
+	
+</web-app>

@@ -1,0 +1,71 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+body {
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
+
+
+.footer {
+	font-size:small;
+}
+
+.footer .copyright{
+	color:#999;
+	font-weight:300;
+}
+
+.footer a{
+	color:#666;
+}
+
+
+#datasets .dataset{
+	margin-top: 10px;
+}
+
+#own-result h1, h2, h3, h4, h5{
+	margin-top: 0px;
+}
+
+#own-result h1{
+	margin-bottom: 20px;
+}
+
+#own-result .row{
+	margin-bottom: 20px;
+}
+
+#own-result .panel table td{
+	padding-right: 5px;
+	vertical-align:top;
+	font-size: small;
+}
+
+#own-result .panel table a{
+	color: #333;
+}
+
+#own-result .panel table td:last-child{
+	padding-right: 0px;
+}
+
+#own-dataset-panel table td{
+	padding-right: 5px;
+	vertical-align:top;
+	font-size: small;
+}
+
+#own-dataset-panel table a{
+	color: #333;
+}
+
+
+
+
+
+
+

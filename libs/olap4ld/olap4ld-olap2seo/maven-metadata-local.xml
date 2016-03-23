@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>olap4ld</groupId>
+  <artifactId>olap4ld-olap2seo</artifactId>
+  <versioning>
+    <release>0.0.1</release>
+    <versions>
+      <version>0.0.1</version>
+    </versions>
+    <lastUpdated>20151125102604</lastUpdated>
+  </versioning>
+</metadata>

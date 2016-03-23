@@ -1,0 +1,102 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>olap4ld</groupId>
+  <artifactId>olap4ld-olap2seo</artifactId>
+  <version>0.0.1</version>
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <resources>
+      <resource>
+        <directory>src</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
+      <resource>
+        <directory>resources</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
+      <resource>
+        <directory>query_templates</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
+      <resource>
+        <directory>testresources</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
+    </resources>
+    <plugins>
+	   <plugin>
+	      <groupId>org.apache.maven.plugins</groupId>
+	      <version>3.1</version>
+	      <artifactId>maven-compiler-plugin</artifactId>
+           <configuration>
+               <source>1.6</source>
+               <target>1.6</target>
+           </configuration>
+	  </plugin>
+	  <plugin>
+	      <artifactId>maven-source-plugin</artifactId>
+	      <executions>
+	        <execution>
+	          <id>attach-sources</id>
+	          <goals>
+	            <goal>jar</goal>
+	          </goals>
+	        </execution>
+	      </executions>
+		</plugin>
+    </plugins>
+  </build>
+  
+  <repositories>
+    <repository>
+	    <id>pentaho-releases</id>
+	    <url>http://repository.pentaho.org/artifactory/repo/</url>
+  	</repository>
+  	<repository>
+	  <id>in-project</id>
+	  <name>In Project Repo</name>
+	  <url>file://${project.basedir}/lib</url>
+	</repository>
+  </repositories>
+  
+  <dependencies>
+  <!-- Dependencies starting with private. or external libs stored in lib/private  -->
+    <dependency>
+      <groupId>private.xerces</groupId>
+      <artifactId>xercesImpl</artifactId>
+        <!-- Version number was unknown thus created randomly-->
+      <version>10.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>private.semanticweb.yars</groupId>
+      <artifactId>nxparser</artifactId>
+      <version>1.2.3</version>
+    </dependency>
+    <dependency>
+      <groupId>private.sf.saxon</groupId>
+      <artifactId>saxon</artifactId>
+      <version>9.2</version>
+    </dependency>
+    <dependency>
+	    <groupId>org.openrdf.sesame</groupId>
+	    <artifactId>sesame-runtime</artifactId>
+	    <version>2.7.9</version>
+	</dependency>
+	<dependency>
+	  <groupId>org.olap4j</groupId>
+	  <artifactId>olap4j</artifactId>
+	  <version>1.2.0</version>
+	</dependency>
+  </dependencies>
+  <name>olap4ld for olap2seo</name>
+  <url>https://github.com/bkaempgen/olap4ld</url>
+  <description>Some adjustments by Daniel Breucker on olap4ld to run for olap2seo</description>
+</project>

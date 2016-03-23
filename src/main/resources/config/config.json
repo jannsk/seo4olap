@@ -1,0 +1,691 @@
+{
+	"isDebugMode": "false",
+	"baseUri": "http://example.org",
+	"version": "1.0.0",
+	"staticSites": [
+		{"url": "/impressum", "text": "Imprint"},
+		{"url": "/sitemap", "text": "Sitemap"}
+	],
+  	"datasets": [
+    {
+      "id": "gdp",
+      "uri": "https://estatwrap-89.appspot.com/id/tec00001#ds",
+      "initOnStartup": false,
+      "description": "Dataset shows the Gross Domestic Product (GDP) in Euros in european countries. ",
+      "title": "Gross Domestic Product (GDP)",
+      "licence": {"url": "http://ec.europa.eu/geninfo/legal_notices_en.htm#copyright", "text": "Reuse is authorised, provided the source is acknowledged"},
+      "source": {"url": "http://ec.europa.eu/eurostat/tgm/table.do?tab=table&init=1&language=en&pcode=tec00001", "text": "Eurostat via Ontologycentral.com"},
+      "sitemap": {
+      	"endpoint": "gdp",
+      	"maxDimensionCount": 2,
+      	"maxMeasureCount": 1,
+      	"maxMemberCount": 2
+      },
+      "dimensions": [
+        {
+          "uniqueName": "http://ontologycentral.com/2009/01/eurostat/ns#geo",
+          "id": "country",
+          "label": "country", 
+          "sliceMemberUniqueName" : "https://estatwrap-89.appspot.com/dic/geo#EU28",      
+          "members": [
+            {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#AT",
+	          "id": "austria"
+	        },
+            {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#BE",
+	          "id": "belgium"
+	        },
+            {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#BG",
+	          "id": "bulgaria"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#CH",
+	          "id": "switzerland"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#CY",
+	          "id": "cyprus"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#CZ",
+	          "id": "cz"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#DE",
+	          "id": "germany",
+	          "label": "Germany"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#DK",
+	          "id": "denmark"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#EA",
+	          "id": "euro",
+	          "label": "Euro area"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#EE",
+	          "id": "estonia"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#EL",
+	          "id": "greece"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#ES",
+	          "id": "spain"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#FI",
+	          "id": "finland"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#FR",
+	          "id": "france"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#HR",
+	          "id": "croatia"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#HU",
+	          "id": "hungary"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#IE",
+	          "id": "ireland"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#IS",
+	          "id": "iceland"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#IT",
+	          "id": "italy"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#LT",
+	          "id": "lithuania"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#NL",
+	          "id": "netherlands"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#NO",
+	          "id": "norway"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#PL",
+	          "id": "poland"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#RO",
+	          "id": "romania"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#SE",
+	          "id": "sweden"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#SI",
+	          "id": "slovenia"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#SK",
+	          "id": "slovakia"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#UK",
+	          "id": "uk"
+	        },
+            {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#EU28",
+	          "id": "eu28"
+	        }
+          ]
+        },
+        {
+          "uniqueName": "http://purl.org/dc/terms/date",
+          "id": "dates",
+          "label": "year",
+          "sliceLabel": "Average between 2007 to 2014" 
+        }
+      ],
+      "dimensionMeasures": [
+        {
+          "uniqueName": "	http://ontologycentral.com/2009/01/eurostat/ns#unit",
+          "id": "unit",   
+          "members": [
+            {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/unit#CP_EUR_HAB",
+	          "id": "gdp-capita-member"
+	        },
+            {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/unit#CP_MEUR",
+	          "id": "gdp-total-member"
+	        }
+          ]
+        }
+      ],
+       "measures": [
+       	{
+          "uniqueName": "http://purl.org/linked-data/sdmx/2009/measure#obsValueAGGFUNCAVG",
+          "id": "obs",
+          "measureMembers": [
+        	{
+	          "uniqueName": ":gdp-capita",
+	          "id": "gdp-capita",
+	          "label": "Gross domestic product (GDP) per capita",
+	          "measureMemberUniqueName": "https://estatwrap-89.appspot.com/dic/unit#CP_EUR_HAB" 
+	        },
+	        {
+	          "uniqueName": ":gdp-total",
+	          "id": "gdp-total",
+	          "label": "Gross domestic product (GDP) in million Euro",
+	          "measureMemberUniqueName": "https://estatwrap-89.appspot.com/dic/unit#CP_MEUR" 
+	        }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "employment",
+      "uri": "https://estatwrap-89.appspot.com/id/lfsi_emp_a#ds",
+      "initOnStartup": false,
+      "description": "Dataset shows the employment rate (20-64 years) in european countries by gender and year.",
+      "title": "Employment in the EU - annual averages",
+      "licence": {"url": "http://ec.europa.eu/geninfo/legal_notices_en.htm#copyright", "text": "Reuse is authorised, provided the source is acknowledged"},
+      "source": {"url": "http://appsso.eurostat.ec.europa.eu/nui/show.do?wai=true&dataset=lfsi_emp_a", "text": "Eurostat via Ontologycentral.com"},
+      "sitemap": {
+      	"endpoint": "employment",
+      	"maxDimensionCount": 2,
+      	"maxMeasureCount": 1,
+      	"maxMemberCount": 2
+      },
+      "dimensions": [
+        {
+          "uniqueName": "http://ontologycentral.com/2009/01/eurostat/ns#geo",
+          "id": "country",
+          "label": "country",
+          "sliceMemberUniqueName": "https://estatwrap-89.appspot.com/dic/geo#EU28",
+          "members": [
+          	{
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#AT",
+	          "id": "austria"
+	        },
+            {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#BE",
+	          "id": "belgium"
+	        },
+            {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#BG",
+	          "id": "bulgaria"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#CH",
+	          "id": "switzerland"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#CY",
+	          "id": "cyprus"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#CZ",
+	          "id": "cz"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#DE",
+	          "id": "germany",
+	          "label": "Germany"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#DK",
+	          "id": "denmark"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#EA",
+	          "id": "euro",
+	          "label": "Euro area"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#EE",
+	          "id": "estonia"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#EL",
+	          "id": "greece"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#ES",
+	          "id": "spain"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#FI",
+	          "id": "finland"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#FR",
+	          "id": "france"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#HR",
+	          "id": "croatia"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#HU",
+	          "id": "hungary"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#IE",
+	          "id": "ireland"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#IS",
+	          "id": "iceland"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#IT",
+	          "id": "italy"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#LT",
+	          "id": "lithuania"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#NL",
+	          "id": "netherlands"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#NO",
+	          "id": "norway"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#PL",
+	          "id": "poland"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#RO",
+	          "id": "romania"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#SE",
+	          "id": "sweden"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#SI",
+	          "id": "slovenia"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#SK",
+	          "id": "slovakia"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#UK",
+	          "id": "uk"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#US",
+	          "id": "us"
+	        },
+            {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#EU28",
+	          "id": "eu28"
+	        }
+          ]
+        },
+        {
+          "uniqueName": "http://ontologycentral.com/2009/01/eurostat/ns#sex",
+          "id": "gender",
+          "label": "gender",
+          "sliceMemberUniqueName": "https://estatwrap-89.appspot.com/dic/sex#T",
+          "members": [
+          	{
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/sex#F",
+	          "id": "female",
+	          "label": "women"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/sex#M",
+	          "id": "male",
+	          "label": "men"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/sex#T",
+	          "id": "total",
+	          "label": "men and women"
+	        }
+          ]
+        },
+        {
+          "uniqueName": "http://purl.org/dc/terms/date",
+          "id": "year",
+          "label": "year",
+          "sliceLabel": "Average between 2007 to 2014" 
+        }
+      ],
+      "dimensionMeasures": [
+        {
+          "uniqueName": "http://ontologycentral.com/2009/01/eurostat/ns#indic_em",
+          "id": "rateDimension",
+          "members": [
+          	{
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/indic_em#EMP_15_64",
+	          "id": "emprate1"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/indic_em#EMP_RT_20_64",
+	          "id": "emprate2"
+	        }
+          ]
+        }
+      ],
+      "measures": [
+        {
+          "uniqueName": "http://purl.org/linked-data/sdmx/2009/measure#obsValueAGGFUNCAVG",	
+          "id": "obs",
+          "label": "Employment rate",
+           "measureMembers": [
+        	{
+	          "uniqueName": ":emptotal",
+	          "id": "absolute",
+	          "label": "Absolute Employment",
+	          "measureMemberUniqueName": "https://estatwrap-89.appspot.com/dic/indic_em#EMP_15_64" 
+	        },
+	        {
+	          "uniqueName": ":ratetotal",
+	          "id": "rate",
+	          "label": "Employment rate",
+	          "measureMemberUniqueName": "https://estatwrap-89.appspot.com/dic/indic_em#EMP_RT_20_64" 
+	        }
+          ]
+        }
+      ]
+    }/*,
+     {
+      "id": "population",
+      "uri": "https://estatwrap-89.appspot.com/id/demo_pjangroup#ds",
+      "initOnStartup": false,
+      "description": "Dataset shows the population by year, gender and age group on the first of January.",
+      "title": "Population in the EU",
+      "licence": {"url": "http://ec.europa.eu/geninfo/legal_notices_en.htm#copyright", "text": "Reuse is authorised, provided the source is acknowledged"},
+      "source": {"url": "http://appsso.eurostat.ec.europa.eu/nui/show.do?wai=true&dataset=lfsi_emp_a", "text": "Eurostat via Ontologycentral.com"},
+      "sitemap": {
+      	"endpoint": "population",
+      	"maxDimensionCount": 2,
+      	"maxMeasureCount": 1,
+      	"maxMemberCount": 2
+      },
+      "dimensions": [
+        {
+          "uniqueName": "http://ontologycentral.com/2009/01/eurostat/ns#geo",
+          "id": "country",
+          "label": "country",
+          "sliceMemberUniqueName": "https://estatwrap-89.appspot.com/dic/geo#EU28",
+          "members": [
+          	{
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#AL",
+	          "id": "albania"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#AM",
+	          "id": "armenia"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#AT",
+	          "id": "austria"
+	        },
+            {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#BE",
+	          "id": "belgium"
+	        },
+            {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#BG",
+	          "id": "bulgaria"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#CH",
+	          "id": "switzerland"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#CY",
+	          "id": "cyprus"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#CZ",
+	          "id": "cz"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#DE",
+	          "id": "germany",
+	          "label": "Germany"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#DK",
+	          "id": "denmark"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#EA19",
+	          "id": "euro",
+	          "label": "Euro area"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#EE",
+	          "id": "estonia"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#EL",
+	          "id": "greece"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#ES",
+	          "id": "spain"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#FI",
+	          "id": "finland"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#FR",
+	          "id": "france"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#HR",
+	          "id": "croatia"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#HU",
+	          "id": "hungary"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#IE",
+	          "id": "ireland"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#IS",
+	          "id": "iceland"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#IT",
+	          "id": "italy"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#LT",
+	          "id": "lithuania"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#NL",
+	          "id": "netherlands"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#NO",
+	          "id": "norway"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#PL",
+	          "id": "poland"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#RO",
+	          "id": "romania"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#RU",
+	          "id": "russia"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#SE",
+	          "id": "sweden"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#SI",
+	          "id": "slovenia"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#SK",
+	          "id": "slovakia"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#UK",
+	          "id": "uk"
+	        },
+            {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/geo#EU28",
+	          "id": "eu28"
+	        }
+          ]
+        },
+        {
+          "uniqueName": "http://ontologycentral.com/2009/01/eurostat/ns#sex",
+          "id": "gender",
+          "label": "gender",
+          "sliceMemberUniqueName": "https://estatwrap-89.appspot.com/dic/sex#T",
+          "members": [
+          	{
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/sex#F",
+	          "id": "female",
+	          "label": "women"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/sex#M",
+	          "id": "male",
+	          "label": "men"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/sex#T",
+	          "id": "total",
+	          "label": "men and women"
+	        }
+          ]
+        },
+        {
+          "uniqueName": "http://purl.org/dc/terms/date",
+          "id": "year",
+          "label": "year",
+          "sliceLabel": "Average between 2007 to 2014" 
+        },
+        {
+          "uniqueName": "http://ontologycentral.com/2009/01/eurostat/ns#age",
+          "id": "age",
+          "label": "age group",
+          "sliceMemberUniqueName": "https://estatwrap-89.appspot.com/dic/age#TOTAL",
+          "members": [
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/age#Y_LT5",
+	          "id": "lt5",
+	          "label": "less than 5 years"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/age#Y5-9",
+	          "id": "5-9",
+	          "label": "5 to 9 years"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/age#TOTAL",
+	          "id": "age-total"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/age#Y10-14",
+	          "id": "10-14",
+	          "label": "10 to 14 years"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/age#Y15-19",
+	          "id": "15-19",
+	          "label": "15 to 19 years"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/age#Y20-24",
+	          "id": "20-24",
+	          "label": "20 to 24 years"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/age#Y25-29",
+	          "id": "25-29",
+	          "label": "25 to 29 years"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/age#Y30-34",
+	          "id": "30-34",
+	          "label": "30 to 34 years"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/age#Y35-39",
+	          "id": "35-39",
+	          "label": "35 to 39 years"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/age#Y40-44",
+	          "id": "40-44",
+	          "label": "40 to 44 years"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/age#Y45-49",
+	          "id": "45-49",
+	          "label": "45 to 49 years"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/age#Y50-54",
+	          "id": "50-54",
+	          "label": "50 to 54 years"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/age#Y55-59",
+	          "id": "55-59",
+	          "label": "55 to 59 years"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/age#Y60-64",
+	          "id": "60-64",
+	          "label": "60 to 64 years"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/age#Y65-69",
+	          "id": "65-69",
+	          "label": "65 to 69 years"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/age#Y70-74",
+	          "id": "70-74",
+	          "label": "70 to 74 years"
+	        },
+	        {
+	          "uniqueName": "https://estatwrap-89.appspot.com/dic/age#Y_GE75",
+	          "id": "plus75"
+	        }
+          ]
+        }
+      ],
+      "measures": [
+        {
+          "uniqueName": "http://purl.org/linked-data/sdmx/2009/measure#obsValueAGGFUNCAVG",	
+          "id": "obs",
+          "label": "Population"
+        }
+      ]
+    }*/
+  ]
+}

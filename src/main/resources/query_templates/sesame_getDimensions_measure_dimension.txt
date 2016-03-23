@@ -1,0 +1,25 @@
+PREFIX dcterms: <http://purl.org/dc/terms/> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX dc: <http://purl.org/dc/elements/1.1/> 
+PREFIX sdmx-measure: <http://purl.org/linked-data/sdmx/2009/measure#> 
+PREFIX qb: <http://purl.org/linked-data/cube#> 
+PREFIX skosclass: <http://ddialliance.org/ontologies/skosclass#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#> 
+SELECT DISTINCT 
+?CATALOG_NAME ?SCHEMA_NAME ?CUBE_NAME ?DIMENSION_NAME ?DIMENSION_UNIQUE_NAME ?DIMENSION_CAPTION ?DIMENSION_ORDINAL ?DIMENSION_TYPE ?DESCRIPTION 
+{{{STANDARDFROM}}}
+WHERE {
+?CUBE_NAME a qb:DataSet. 
+BIND('{{{TABLE_CAT}}}' as ?CATALOG_NAME). 
+BIND('{{{TABLE_SCHEM}}}' as ?SCHEMA_NAME). 
+BIND('Measures' as ?DIMENSION_NAME). 
+BIND('Measures' as ?DIMENSION_UNIQUE_NAME). 
+BIND('Measures' as ?DIMENSION_CAPTION). 
+BIND('Measures' as ?DESCRIPTION).
+BIND('2' as ?DIMENSION_TYPE). 
+BIND('0' as ?DIMENSION_ORDINAL). 
+{{{FILTERS}}} 
+} ORDER BY ?CUBE_NAME 
+

@@ -1,0 +1,23 @@
+<queue-entries>
+  <queue>
+    <name>setup-database-queue</name>
+    <rate>3/s</rate>
+    <bucket-size>40</bucket-size>
+    <max-concurrent-requests>10</max-concurrent-requests>
+    <retry-parameters>
+      <task-retry-limit>2</task-retry-limit>
+      <task-age-limit>2d</task-age-limit>
+    </retry-parameters>
+    
+  </queue>
+  <queue>
+    <name>init-queue</name>
+    <rate>1/s</rate>
+    <bucket-size>2</bucket-size>
+    <max-concurrent-requests>5</max-concurrent-requests>
+    <retry-parameters>
+      <task-retry-limit>2</task-retry-limit>
+      <task-age-limit>2d</task-age-limit>
+    </retry-parameters>
+  </queue>
+</queue-entries>
