@@ -173,7 +173,7 @@ class PathConverter {
 			maxMeasureCount = Integer.valueOf(patternTokens[1]);
 			maxDimensionCount = Integer.valueOf(patternTokens[2]);
 			maxMemberCount = Integer.valueOf(patternTokens[3]);
-		} catch(NumberFormatException e){
+		} catch(Exception e){
 			return null;
 		}
 		
